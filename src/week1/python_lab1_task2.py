@@ -11,8 +11,13 @@ Ask user for their name and print result.
 def greet_user(name):
     """Return a greeting message after cleaning and capitalizing the name."""
     # TODO: implement cleaning and formatting
-    pass
+    a = name.strip()
+    b = a.capitalize()
+
+    return b
 
 if __name__ == "__main__":
     # TODO: read name from input and print greeting
+    x = str(input('Enter word ='))
+    print(greet_user(x))
     pass

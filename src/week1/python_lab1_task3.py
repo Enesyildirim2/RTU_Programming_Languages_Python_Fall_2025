@@ -11,8 +11,17 @@ Return results as a tuple and print summary in main.
 def analyze_sentence(text):
     """Return length, word count, and whether 'Python' appears in text."""
     # TODO: implement function logic
-    pass
+    a = len(text)
+    b = len(text.split())
+    c = text.find('Python')
+    if c == 0:
+        d = print('There is Python word')
+    else:
+        d = print('There is no Python word')
+    return a, b, d
 
 if __name__ == "__main__":
     # TODO: read sentence from input, call function, and print results
+    a = str(input('Enter word ='))
+    print(analyze_sentence(a))
     pass
