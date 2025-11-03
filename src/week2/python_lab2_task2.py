@@ -17,13 +17,13 @@ Given the list:
 """
 
 # Fill in your own numbers or generate 10 random integers
-numbers = []
+numbers = [ 3, 8, -2, 7, 0, -5, 10, 20, -15, 4 ]
 
 # TODO: Implement comprehensions
-squares = []
-positives = []
-even_squares = set()
-cubes = {}
+squares = [ x**2 for x in numbers ]
+positives = [x for x in numbers if x > 0]
+even_squares = set( x**2 for x in numbers if x % 2 == 0 )
+cubes = {   x: x**3 for x in numbers }
 
 # TODO: Print results
 print("Squares:", squares)
