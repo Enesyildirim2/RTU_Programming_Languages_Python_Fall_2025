@@ -174,7 +174,7 @@ SN2902,BRU,LHR,2025-13-40 10:00,2025-13-40 12:00,99.99"""
     print("Created sample 'db.csv' file for testing.\n")
 
 if __name__ == "__main__":
-    # Check if file exists, if not create it (for your convenience)
+    # Check if file exists, if not create it 
     try:
         with open(INPUT_FILE, 'r') as f:
             pass
