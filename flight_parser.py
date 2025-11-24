@@ -103,7 +103,7 @@ def main():
         if not clean_line:
             continue
 
-        # Handle Comment Lines (Grade 6 requirement based on error.txt example)
+        # Handle Comment Lines
         if clean_line.startswith("#"):
             error_logs.append(f"Line {line_num}: {clean_line} -> comment line, ignored for data parsing")
             continue
@@ -147,7 +147,7 @@ def main():
     except IOError as e:
         print(f"Error writing error log: {e}")
 
-# --- Helper to Create Dummy Data (For testing purposes) ---
+# --- Helper to Create Dummy Data (For testing) ---
 def create_sample_csv():
     content = """flight_id,origin,destination,departure_datetime,arrival_datetime,price
 # === Valid flights ===
@@ -174,7 +174,7 @@ SN2902,BRU,LHR,2025-13-40 10:00,2025-13-40 12:00,99.99"""
     print("Created sample 'db.csv' file for testing.\n")
 
 if __name__ == "__main__":
-    # Check if file exists, if not create it 
+    # Check if file exists, if not create it
     try:
         with open(INPUT_FILE, 'r') as f:
             pass
